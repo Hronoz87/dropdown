@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="filter.css">
+    <script src="filter.js"></script>
+</head>
+<body>
+    <div class="view-dropdown">
+        <p>Города России</p>
+        <div class="dropdown">
+            <button class="dropdown-botton" onclick="activeSearch(event)">Выберите Город</button>
+            <div class="content">
+                <input type="search" placeholder="Поиск..." name="s-city" id="fval" onkeyup="filterSearch(event)">
+                <ul class="dropdown-content" id="content" >
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
