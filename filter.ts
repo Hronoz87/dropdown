@@ -22,12 +22,12 @@ function filterSearch(event){
     arrUl.innerHTML = '';
     for (let i = 0; i < array.length; i ++) {
         arrUl.innerHTML += `<li>${array[i]}</li>`;
-        let temp = array.indexOf(valbutton);
-        if (temp === -1){
-            arrUl.innerHTML -= `<li>${array[i]}</li>`;
-        }
-        }
-        
+    }
+    let arr2 = array.filter(item => item.includes(valbutton.toLowerCase()) === true);
+    console.log(arr2);
+    arrUl.innerHTML = '';
+    for (var i = 0; i < arr2.length; i++) {
+     let arr1 = arrUl.innerHTML += "<li>" + arr2[i] + "</li>";
     }
 
     
