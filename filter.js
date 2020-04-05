@@ -16,7 +16,7 @@ function filterSearch(event) {
     for (var i_1 = 0; i_1 < array.length; i_1++) {
         arrUl.innerHTML += "<li>" + array[i_1] + "</li>";
     }
-    var arr2 = array.filter(function (item) { return item.includes(valbutton.toLowerCase()) === true; });
+    var arr2 = array.filter(function (item) { return item.includes(valbutton) === true; });
     console.log(arr2);
     arrUl.innerHTML = '';
     for (var i = 0; i < arr2.length; i++) {
