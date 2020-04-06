@@ -5,7 +5,7 @@ function activeSearch() {
     var arrUl = document.querySelector('.dropdown-content');
     arrUl.innerHTML = '';
     for (var i = 0; i < array.length; i++) {
-        arrUl.innerHTML += "<li>" + array[i] + "</li>";
+        var arr = arrUl.innerHTML += "<li>" + array[i] + "</li>";
     }
 }
 function filterSearch(event) {
@@ -14,7 +14,7 @@ function filterSearch(event) {
     var arrUl = document.querySelector('.dropdown-content');
     arrUl.innerHTML = '';
     for (var i_1 = 0; i_1 < array.length; i_1++) {
-        arrUl.innerHTML += "<li>" + array[i_1] + "</li>";
+        var arr = arrUl.innerHTML += "<li>" + array[i_1] + "</li>";
     }
     var arr2 = array.filter(function (item) { return item.includes(valbutton) === true; });
     console.log(arr2);
@@ -22,4 +22,5 @@ function filterSearch(event) {
     for (var i = 0; i < arr2.length; i++) {
         var arr1 = arrUl.innerHTML += "<li>" + arr2[i] + "</li>";
     }
+    return;
 }

@@ -9,7 +9,7 @@ function activeSearch() {
     const arrUl: HTMLElement = document.querySelector('.dropdown-content') as HTMLElement;
     arrUl.innerHTML = '';
     for (let i = 0; i < array.length; i ++) {
-        arrUl.innerHTML += `<li>${array[i]}</li>`;
+       const arr: string  = arrUl.innerHTML += `<li>${array[i]}</li>`;
     }
     
 }
@@ -17,19 +17,19 @@ function activeSearch() {
 function filterSearch(event){
     console.log(event.target.value);
     const valbutton: string = document.getElementById('fval').value;  
-    
     const arrUl: HTMLElement = document.querySelector('.dropdown-content') as HTMLElement;
     arrUl.innerHTML = '';
     for (let i = 0; i < array.length; i ++) {
-        arrUl.innerHTML += `<li>${array[i]}</li>`;
+      const  arr: string  = arrUl.innerHTML += `<li>${array[i]}</li>`;
     }
-    let arr2 = array.filter(item => item.includes(valbutton.toLowerCase()) === true);
+    let arr2: string [] = array.filter(item => item.includes(valbutton) === true);
     console.log(arr2);
     arrUl.innerHTML = '';
     for (var i = 0; i < arr2.length; i++) {
-     let arr1 = arrUl.innerHTML += "<li>" + arr2[i] + "</li>";
-    }
-
+     const arr1: string = arrUl.innerHTML += "<li>" + arr2[i] + "</li>";
+    } return 
+    
+    
     
     
 }
