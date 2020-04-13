@@ -12,6 +12,13 @@ function activeSearch() {
        const arr: string  = arrUl.innerHTML += `<li>${array[i]}</li>`;
     }
     
+    content.onclick = function(event) {
+        if (event.target.tagName == "LI" ) {
+            document.getElementById('fval').value = event.target.innerText ;
+        }
+        arrUl.innerHTML = '';
+    }
+    
 }
 
 function filterSearch(event){

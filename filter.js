@@ -7,6 +7,12 @@ function activeSearch() {
     for (var i = 0; i < array.length; i++) {
         var arr = arrUl.innerHTML += "<li>" + array[i] + "</li>";
     }
+    content.onclick = function (event) {
+        if (event.target.tagName == "LI") {
+            document.getElementById('fval').value = event.target.innerText;
+        }
+        arrUl.innerHTML = '';
+    };
 }
 function filterSearch(event) {
     console.log(event.target.value);
