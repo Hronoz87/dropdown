@@ -19,10 +19,8 @@ function filterSearch(event){
     const valbutton: string = document.getElementById('fval').value;  
     const arrUl: HTMLElement = document.querySelector('.dropdown-content') as HTMLElement;
     arrUl.innerHTML = '';
-    for (let i = 0; i < array.length; i ++) {
-      const  arr: string  = arrUl.innerHTML += `<li>${array[i]}</li>`;
-    }
-    let arr2: string [] = array.filter(item => item.includes(valbutton) === true);
+    
+    let arr2: string [] = array.filter(item => item.toLowerCase().indexOf(valbutton) !== -1);
     console.log(arr2);
     arrUl.innerHTML = '';
     for (var i = 0; i < arr2.length; i++) {
